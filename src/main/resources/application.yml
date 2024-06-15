@@ -1,0 +1,26 @@
+spring:
+  application.name: wishlist
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: freedom
+      authentication-database: admin
+      auto-index-creation: true
+#logging.level.root=DEBUG
+
+server:
+  forward-headers-strategy: framework
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+  version: '@springdoc.version@'
+  swagger-ui:
+    use-root-path: true
